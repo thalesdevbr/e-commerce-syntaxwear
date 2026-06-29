@@ -1,0 +1,152 @@
+/* ============================================================
+   COMPONENTS/FORMS.CSS – Sistema de formulários
+   ============================================================ */
+
+/* Form base styles */
+input,
+select,
+textarea {
+  font: inherit;
+  width: 100%;
+  padding: var(--gap-sm);
+  border: 1px solid var(--c-muted);
+  border-radius: var(--border-radius);
+  background-color: var(--c-surface);
+  color: var(--c-text);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+/* Focus states */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 3px var(--c-primary-l);
+}
+
+/* Error states */
+input.error,
+select.error,
+textarea.error {
+  border-color: var(--c-danger);
+  background-color: var(--c-danger-l);
+}
+input.error:focus,
+select.error:focus,
+textarea.error:focus {
+  box-shadow: 0 0 0 3px var(--c-danger-l);
+}
+
+/* Success states */
+input.success,
+select.success,
+textarea.success {
+  border-color: var(--c-success);
+  background-color: var(--c-success-l);
+}
+
+/* Disabled states */
+input:disabled,
+select:disabled,
+textarea:disabled {
+  background-color: var(--c-muted-l);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: var(--gap-xs);
+  font-weight: var(--fw-medium);
+  color: var(--c-text);
+}
+
+/* Input groups */
+.input-group {
+  display: flex;
+  gap: var(--gap-xs);
+  align-items: stretch;
+}
+.input-group > * {
+  flex: 1;
+}
+.input-group-btn {
+  flex: 0 0 auto;
+}
+
+/* Checkboxes e radios */
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+  margin-bottom: var(--gap-md);
+}
+.form-check-input {
+  width: 1rem;
+  height: 1rem;
+  appearance: none;
+  border: 2px solid var(--c-muted);
+  border-radius: var(--border-radius);
+  background-color: var(--c-surface);
+  cursor: pointer;
+  position: relative;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+.form-check-input:checked {
+  background-color: var(--c-primary);
+  border-color: var(--c-primary);
+}
+.form-check-input:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  background: var(--c-surface);
+  border-radius: 50%;
+}
+.form-check-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--c-primary-l);
+}
+.form-check-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Select custom */
+.select-wrapper {
+  position: relative;
+}
+.select {
+  appearance: none;
+  padding-right: 2.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 0.75em;
+}
+.select:focus {
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 3px var(--c-primary-l);
+}
+
+/* Textarea */
+textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+/* Helper classes */
+.form-group {
+  margin-bottom: var(--gap-md);
+}
+.help-text {
+  margin-top: var(--gap-xs);
+  font-size: var(--fs-xs);
+  color: var(--c-muted);
+}

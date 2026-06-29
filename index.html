@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SyntaxWear – E-commerce de Camisetas</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <!-- Skip to content – acessibilidade -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" role="banner">
+    <div class="header__top container">
+      <p class="promo">Frete grátis acima de R$150</p>
+    </div>
+
+    <nav class="header__main" role="navigation" aria-label="Navegação principal">
+      <div class="container">
+        <a href="/" class="logo" aria-label="SyntaxWear – Início"><img src="assets/images/logo.svg" alt="SyntaxWear"></a>
+
+        <form class="search" role="search" action="/busca" method="GET">
+          <label for="q" class="visually-hidden">Buscar produtos</label>
+          <input type="search" id="q" name="q" placeholder="O que procura?" required>
+          <button type="submit" class="btn btn--icon" aria-label="Buscar">
+            <svg class="icon icon--search"><use href="#icon-search"/></svg>
+          </button>
+        </form>
+
+        <ul class="header__actions">
+          <li><a href="/login" class="btn btn--icon" data-action="login" aria-label="Entrar"><svg class="icon"><use href="#icon-user"/></svg></a></li>
+          <li><a href="/carrinho" class="btn btn--icon" data-action="cart" aria-label="Carrinho"><svg class="icon"><use href="#icon-cart"/></svg></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Menu das categorias (desktop) -->
+    <nav class="header__categories" role="navigation" aria-label="Categorias">
+      <div class="container">
+        <ul class="category-list">
+          <li><a href="/categoria/camisetas" data-category="camisetas" aria-current="page">Camisetas</a></li>
+          <li><a href="/categoria/hoodies" data-category="hoodies">Hoodies</a></li>
+          <li><a href="/categoria/acessorios" data-category="acessorios">Acessórios</a></li>
+          <li><a href="/categoria/novidades" data-category="novidades">Novidades</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==================== MAIN ==================== -->
+  <main id="main-content" role="main">
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <h1 id="hero-title" class="hero__title style--text--primary">Estilo que codifica</h1>
+          <p class="hero__subtitle style--text--secondary">Camisetas e hoodies inspirados no mundo da programação.</p>
+          <a href="/categoria/novidades" class="btn btn--primary hero__cta">Ver novidades</a>
+        </div>
+        <div class="hero__media">
+          <img src="assets/images/hero/hero.jpg" alt="Modelo usando uma camiseta SyntaxWear">
+        </div>
+      </div>
+      <nav class="hero__pills">
+        <ul>
+          <li><a href="#pills-requerimentos" class="pill-link">Requisitos Técnicos</a></li>
+          <li><a href="#pills-contato" class="pill-link">Contato</a></li>
+          <li><a href="#pills-privacidade" class="pill-link">Política de Privacidade</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- ==================== PANEL – CATEGORIAS EM DESTAQUE ==================== -->
+    <section class="panel" aria-labelledby="panel-title">
+      <h2 id="panel-title" class="visually-hidden">Categorias em Destaque</h2>
+      <div class="container panel__grid">
+        <a href="/categoria/camisetas" class="panel__card">
+          <img src="assets/images/categories/camisetas.jpg" alt="Camisetas">
+          <span class="panel__label style--text--primary">Camisetas</span>
+        </a>
+        <a href="/categoria/hoodies" class="panel__card">
+          <img src="assets/images/categories/hoodies.jpg" alt="Hoodies">
+          <span class="panel__label style--text--secondary">Hoodies</span>
+        </a>
+        <a href="/categoria/acessorios" class="panel__card">
+          <img src="assets/images/categories/acessorios.jpg" alt="Acessórios">
+          <span class="panel__label style--text--tertiary">Acessórios</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== PRODUCT GRID ==================== -->
+    <section class="product-grid" aria-labelledby="products-title">
+      <h2 id="products-title" class="product-grid__title style--text--primary">Produtos em Destaque</h2>
+
+      <div class="container product-grid__controls">
+        <label for="sort" class="visually-hidden">Ordenar por</label>
+        <select id="sort" class="select">
+          <option value="relevance">Relevancia</option>
+          <option value="price-asc">Menor Preço</option>
+          <option value="price-desc">Maior Preço</option>
+          <option value="newest">Mais Recentes</option>
+        </select>
+        <button class="btn btn--secondary sort-reset">Resetar Ordenação</button>
+      </div>
+
+      <ul class="container product-grid__list" role="list">
+        <div class="grid.product-grid__items" aria-label="Lista de produtos">
+          <div class="grid-grid">
+            <div class="grid-grid__cell">
+              <li class="product-card style--grid-row-1 style--grid-col-1 style--grid-col-sm-4 style--grid-col-md-3 style--grid-col-lg-3 style--grid-col-xl-3\n      style--grid-gutter-t"><a href="/produto/slug1" class="product-card__link"
+                  data-product-id="slug1"
+                  data-category="camisetas"
+                  aria-label="Ver detalhes de Camiseta 'Hello World'">
+                <figure class="product-card__figure style--relative">
+                  <img src="assets/images/products/hello-world.jpg"
+                       alt="Camiseta 'Hello World'"
+                       loading="lazy"
+                       width="400" height="400">
+                  <figcaption class="product-card__badge style--absolute style--top-">Novo!</figcaption>
+                </figure>
+
+                <div class="product-card__info style--relative">
+                  <div class="product-card__category-container"><span class="style--block-none">Camisetas</span></div>
+                  <h3 class="product-card__name style--text--subheading">Hello World</h3>
+                  <div class="product-card__price style--relative"><span class="price--current style--block-none"
+                      itemprop="price" content="149.90">Śr$ 149,90</span></div>
+                </div>
+
+                <button class="btn btn--secondary product-card__add style--inline-width"
+                    data-action="add-cart" data-product-id="slug1"
+                    aria-label="Adicionar Camiseta 'Hello World' ao carrinho">
+                  <svg class="icon icon--cart"><use href="#icon-cart"/></svg>
+                  Adicionar</button>
+              </a>
+            </div>
+            <div class="grid-grid__cell style--copy">(juntar mais 9)
+              <!-- Adicionar mais 9 cards aqui -->
+            </div>
+          </div>
+        </div>
+      </ul>
+
+      <!-- Paginação -->
+      <nav class="product-grid__pagination" aria-label="Paginação de produtos">
+        <ul class="pagination style--flex style--items-center style--justify-center">
+          <li><a href="?page=1" class="pagination__link style--inline-grid style--white" aria-current="page">1</a></li>
+          <li><a href="?page=2" class="pagination__link style--inline-grid style--white">2</a></li>
+          <li><a href="?page=3" class="pagination__link style--inline-grid style--white">3</a></li>
+          <li><a href="?page=2" class="pagination__link style--inline-grid style--outline" style--next-page="true">Próxima →</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- ==================== NEWSLETTER ==================== -->
+    <section class="newsletter style--section-padding"
+             aria-labelledby="newsletter-title"
+             style--text--center">
+      <div class="container newsletter__content">
+        <p class="style--text--large style--text--secondary">¢10 % OFF na primeira compra</p>
+
+        <form class="newsletter__form style--max-width style--auto-margin style--rounded"
+              action="/api/newsletter"
+              method="POST">
+          <label for="email-newsletter" class="visually-hidden">E-mail</label>
+          <input type="email"
+                 id="email-newsletter"
+                 name="email"
+                 placeholder="Seu e-mail"
+                 required
+                 autocomplete="email"
+                 class="style--border-none style--border-radius">
+          <button type="submit" class="btn btn--primary style--inline-width style--shadow">Cadastrar</button>
+        </form>
+        <p class="newsletter__privacy">Respeitamos sua privacidade. <a class="style--link style--underline" href="/politica-de-privacidade">Política de Privacidade</a></p>
+      </div>
+    </section>
+
+    <!-- ==================== BANNERS ==================== -->
+    <section class="banners style--section-padding">
+      <div class="container banners__grid style--grid-2">
+        <a href="/promocoes" class="banner style--rounded style--kb-8 style--py-3 style--mb"
+           id="banner-alerta"
+           aria-label="Msn – Enviamos uma
+           MSN no seu e-mail assim que você completar 15 pontos!"><h3>Atualização no evento <em>Shirtathon</em></h3></a>
+        <div data-time="00:00:10" class="banner--countdown style--bg-orange style--cycler" aria-label="Oferta: 10 % OFF em suas primeiras compras!">10%</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer style--bg-foot style--flex style--items-center style--justify-between style--py-"
+          role="contentinfo">
+    <div class="container footer__content style--flex style--items-start style--justify-start style--pb-" role="main">
+
+      <aside class="footer__brand style--flex style--items-center style--grid-gutter-t">
+        <a href="/" class="logo logo--footer style--inline-width style--inline-flex style--span-reset style--align-items-center"
+           aria-label="SyntaxWear – Início">
+          <img src="assets/images/logo.svg" alt="SyntaxWear">
+        </a>
+        <p class="footer__tagline style--text--small"><span>Sua</span> <span>expressão</span> <span>through</span> <span>code</span></p>
+        <ul class="footer__social style--inline-flex style--column style--result-none style--mt-large"></ul>
+      </aside>
+
+      <nav class="footer__nav--col style--grid-gutter-t style--result-none style--mt-large"
+           aria-label="Área de Ajuda e Suporte">
+        <h3 class="footer__nav-title style--block-none style--span-reset style--inline-flex style--flex-shrink-0">Ajuda</h3>
+        <ul>
+          <li><a href="/contato" data-contact-type="general" class="style--font-medium style--hover-underline">Fale conosco</a></li>
+          <li><a href="/faq" class="style--font-medium style--hover-underline">Perguntas frequentes</a></li>
+          <li><a href="/rastreio" class="style--font-medium style--hover-underline">Rastreador de pedidos</a></li>
+          <li><a href="/devolucoes" class="style--font-medium style--hover-underline">Trocas e devoluções</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__nav--col style--grid-gutter-t style--result-none style--mt-large"
+           aria-label="Informações Institucionais">
+        <h3 class="footer__nav-title style--block-none style--span-reset style--inline-flex style--flex-shrink-0">Institucional</h3>
+        <ul>
+          <li><a href="/sobre" class="style--font-medium style--hover-underline">Sobre Nós</a></li>
+          <li><a href="/carreiras" class="style--font-medium style--hover-underline">Carreiras</a></li>
+          <li><a href="/imprensa" class="style--font-medium style--hover-underline">Imprensa</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__nav--col style--grid-gutter-t style--result-none style--mt-large"
+           aria-label="Políticas e Licenças">
+        <h3 class="footer__nav-title style--block-none style--span-reset style--inline-flex style--flex-shrink-0">Políticas</h3>
+        <ul>
+          <li><a href="/politica-de-privacidade" class="style--font-medium style--hover-underline">Política de Privacidade</a></li>
+          <li><a href="/politica-de-envio" class="style--font-medium style--hover-underline">Política de Envio</a></li>
+          <li><a href="/politica-de-devolucao" class="style--font-medium style--hover-underline">Política de Devolução</a></li>
+          <li><a href="/termos-licenca" class="style--font-medium style--hover-underline">Termos de Licença</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__additional style--grid-gutter-t style--flex style--items-center style--align-items-center style--min-width-stretch style--mt-large">
+        <span class="style--text--secondary">Siga</span> <a class="style--text--primary style--underline" href="#"><time>@SyntaxWear</time></a> <span class="style--text--secondary style--sr-only">on popular platforms</span></div>
+      </div>
+    </div>
+
+    <div class="footer__bottom style--flex style--items-center style--justify-center style--py-" role="complementary">
+      <p>&copy; <span>2023</span><span>SyntaxWear. Todos os direitos reservados.</span> <span class="style--sr-only">. Todos os direitos reservados.</span></p>
+      <ul class="footer__payment style--inline-flex style--justify Centers style--spacing-4 style--mt-4 style--pt-4 style--rounded">
+        <li><svg class="icon"><use href="#icon-visa"/></svg> Visa</li>
+        <li><svg class="icon"><use href="#icon-mastercard"/></svg> MasterCard</li>
+        <li><svg class="icon"><use href="#icon-pix"/></svg> PIX</li>
+        <li><svg class="icon"><use href="#icon-pagseguro"/></svg> PagSeguro</li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ==================== MODALS ==================== -->
+  <!-- Additions para futura funcionalidade -->
+  <div class="modal--overlay style--display-none style--opacity-0" role="dialog" aria-labelledby="modal-title" aria-modal="true" aria-hidden="true">
+    <div class="modal--content style--z-50 style--position-fixed style--width-full style--max-w-6xl style--mx-auto style--my-10 style--rounded-xl style--shadow-lg style--border">
+      <div class="modal--header style--flex style--justify-between style--align-items-center style--rounded-t">
+        <h3 class="modal--title style--font-medium style--px-4 style--py-4 style--sr-only">Opções</h3>
+        <button class="modal--close style--px-4 style--py-4 style--block-none style--inline-flex style--items-center style--hover-shadow style--rounded-lg style--ml-2"><span class="style--sr-only">Fechar modal</span></button>
+      </div>
+      <div class="modal__body style--w-full style--mx-auto style--max-w-6xl style--rounded-b-none style--pb-4 style--py-6"></div>
+    </div>
+  </div>
+
+  <!-- ================== INLINE STYLES ================== -->
+  <style>
+    /* Reset de base */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-base);
+      line-height: var(--line-height-base);
+      color: var(--c-text);
+      background-color: var(--c-bg);
+      scroll-behavior: smooth;
+    }
+
+    /* Elementos HTML5 estágicos */
+    article
+    aside
+    data
+    figcaption
+    figure
+    footer
+    header
+    hgroup
+    mark
+    meter
+    nav
+    time {
+      display: block;
+    }
+
+    /* Acessíbilidade */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      border: 1px solid #000000;
+    }
+    .skip-link:focus {
+      display: block;
+      width: 160px;
+      top: 40px;
+      background: var(--c-bg);
+      text-align: center;
+    }
+
+    /* Hover e animações */
+    .hover-style:hover {
+      transform: scale(1.05);
+    }
+    .open-close вместеounter {
+      opacity: 0;
+      transition: opacity .3s;
+    }
+    .open-close вместеounter.visible:hover.
+      transition: opacity .3s;
+      opacity: 1;
+      background-image: url('/assets/images/hero/hero.jpg');
+    </style>
+  </body>
+</html>
