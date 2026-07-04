@@ -1,184 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SyntaxWear - Camisetas + Hoodies + Acessórios</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components/header.css">
-  <link rel="stylesheet" href="css/components/hero.css">
-  <link rel="stylesheet" href="css/components/panel.css">
-  <link rel="stylesheet" href="css/components/newsletter.css">
-  <link rel="stylesheet" href="css/components/footer.css">
-
-  <!-- Favicons -->
-  <link rel="icon" href="favicons/favicon.ico" type="image/x-icon">
+  <title>SyntaxWear - Ecommerce</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
 </head>
 <body>
-
-  <!-- Skip to content -->
-  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
-
-  <!-- Header -->
   <header class="header">
-    <div class="container header__top">
-      <p>Frete grátis acima de R$150</p>
-    </div>
-
-    <nav class="header__main">
-      <div class="container header__inner">
-        <a href="/" class="header__logo">SyntaxWear</a>
-        <p class="header__tagline">Camisetas + Hoodies + Acessórios</p>
-
-        <ul class="header__icons">
-          <li>
-            <a href="/busca" class="header__icon" aria-label="Buscar">
-              <svg class="icon icon--search" width="20" height="20">
-                <use href="#icon-search"/>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="/login" class="header__icon" aria-label="Entrar">
-              <svg class="icon icon--user" width="20" height="20">
-                <use href="#icon-user"/>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="/carrinho" class="header__icon" aria-label="Carrinho">
-              <svg class="icon icon--cart" width="20" height="20">
-                <use href="#icon-cart"/>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <nav class="header__nav">
-      <div class="container">
-        <ul class="header__menu">
-          <li><a href="/camisetas">Camisetas</a></li>
-          <li><a href="/hoodies">Hoodies</a></li>
-          <li><a href="/acessorios">Acessórios</a></li>
-          <li><a href="/novidades">Novidades</a></li>
-        </ul>
-      </div>
-    </nav>
+    <nav class="nav"></nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero hero--large">
-    <div class="container hero__grid">
-      <div class="hero__text">
-        <h1 class="hero__title">Estilo que codifica</h1>
-        <p class="hero__description">Camisetas e hoodies inspirados no mundo da programação</p>
-        <a href="/novidades" class="btn btn--secondary btn--lg hero__cta">Ver Novidades</a>
-      </div>
-      <div class="hero__media">
-        <img src="images/banners/hero-banner.jpg" alt="Camiseta de edição limitada" loading="lazy">
-      </div>
-    </div>
-  </section>
+  <main class="main">
+    <section class="hero"></section>
+    <section class="categories"></section>
+    <section class="featured-products"></section>
+  </main>
 
-  <!-- Panel Section (Categorias) -->
-  <section class="panel">
-    <div class="container">
-      <div class="panel__header">
-        <h2 class="panel__title">Categorias em Destaque</h2>
-        <a href="/categorias" class="panel__link">Ver todas →</a>
-      </div>
-      <div class="panel__grid">
-        <a href="/camisetas" class="panel__card">
-          <img src="images/products/camiseta-basic.jpg" alt="Camisetas">
-          <span class="panel__label">Camisetas</span>
-        </a>
-        <a href="/hoodies" class="panel__card">
-          <img src="images/products/hoodie-basic.jpg" alt="Hoodies">
-          <span class="panel__label">Hoodies</span>
-        </a>
-        <a href="/acessorios" class="panel__card">
-          <img src="images/products/caneca-basic.jpg" alt="Acessórios">
-          <span class="panel__label">Acessórios</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Newsletter -->
-  <section class="newsletter">
-    <div class="container">
-      <h2 class="newsletter__title">Receba Novidades</h2>
-      <p class="newsletter__description">10% OFF na primeira compra</p>
-
-      <form class="newsletter__form" action="/api/newsletter" method="POST">
-        <label for="email" class="visually-hidden">E-mail</label>
-        <input type="email" id="email" name="email" class="newsletter__input" placeholder="Seu e-mail..." autocomplete="email" required>
-        <button type="submit" class="btn btn--secondary">Cadastrar</button>
-      </form>
-
-      <p class="newsletter__privacy">Respeitamos sua privacidade. <a href="/politica-privacidade">Política de Privacidade</a></p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer__grid">
-      <div class="footer__brand">
-        <a href="/" class="header__logo">SyntaxWear</a>
-        <p class="newsletter__description">Camisetas + Hoodies + Acessórios</p>
-      </div>
-
-      <nav class="footer__col">
-        <h3>Ajuda</h3>
-        <ul>
-          <li><a href="/contato">Contato</a></li>
-          <li><a href="/faq">FAQ</a></li>
-          <li><a href="/rastreio">Rastrear Pedido</a></li>
-        </ul>
-      </nav>
-
-      <nav class="footer__col">
-        <h3>Institucional</h3>
-        <ul>
-          <li><a href="/sobre">Sobre Nós</a></li>
-          <li><a href="/termos">Termos</a></li>
-          <li><a href="/privacidade">Privacidade</a></li>
-        </ul>
-      </nav>
-
-      <div class="footer__col">
-        <h3>Siga-nos</h3>
-        <ul class="header__menu">
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Twitter</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="container footer__bottom">
-      <p>&copy; 2025 SyntaxWear. Todos os direitos reservados.</p>
-    </div>
-  </footer>
-
-  <!-- SVG Icons Sprite (inlined) -->
-  <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
-    <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <circle cx="11" cy="11" r="8"/>
-      <path d="M21 21l-4.35-4.35"/>
-    </symbol>
-    <symbol id="icon-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <circle cx="12" cy="7" r="4"/>
-      <path d="M20 21V12C20 9.79086 18.2091 8 16 8H8C5.79086 8 4 9.79086 4 12V21"/>
-    </symbol>
-    <symbol id="icon-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M6 2L6 22M6 2H2M16 22H8M22 12H18M6 6L2 12L6 18"/>
-    </symbol>
-  </svg>
+  <footer class="footer"></footer>
 </body>
 </html>
