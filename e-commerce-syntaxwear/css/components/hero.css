@@ -1,10 +1,10 @@
 .hero-section {
-    background: url('../../images/banners/hero.jpg')
-    no-repeat center;
+    background: url('../../images/banners/hero.jpg') no-repeat center;
     background-size: cover;
     height: 500px;
     position: relative;
     display: flex;
+    margin-top: 70px;
 }
 
 .hero-overlay {
@@ -13,14 +13,14 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 4rem;
-
+    padding: 0 8rem 0 0;
 }
 
 .hero-content {
     color: #ffffff;
     max-width: 360px;
     text-align: center;
+    padding-bottom: 1rem;
 }
 
 .hero-buttons {
