@@ -1,6 +1,7 @@
 .hero-section {
     background: url('../../images/banners/hero.jpg') no-repeat center;
     background-size: cover;
+    
     height: 500px;
     position: relative;
     display: flex;
@@ -38,5 +39,5 @@
 
 .hero-content .hero-subtitle {
     font-size: 1.25rem;
-    margin-bottom: 1rem;
+    font-weight: 400;
 }
