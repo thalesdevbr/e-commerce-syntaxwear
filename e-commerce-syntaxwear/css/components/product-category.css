@@ -44,14 +44,14 @@
 }
 
 .colorido {
-  background: url(../../images/products/colorido.jpg) no-repeat center;
+  background: url(../../images/products/moderno.jpg) no-repeat center;
   background-size: cover;
 }
 
 .esportivo {
-  background: url(../../images/products/esportivo.jpg) no-repeat center;
+  background: url(../../images/products/esporte.jpg) no-repeat center;
   background-size: cover;
-}   
+}
 
 .futurista {
   background: url(../../images/products/futurista.jpg) no-repeat center;
