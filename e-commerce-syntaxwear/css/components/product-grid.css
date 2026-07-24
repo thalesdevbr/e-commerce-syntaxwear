@@ -2,12 +2,37 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
+    border-radius: 20px;
 }
-
 
 .highlight {
     grid-area: highlight;
     background-image: url(../../images/products/card_imagem.jpg);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 24px;
+}
+
+.card-title,
+.card-subtitle {
+    color: #ffffff;
+    margin: 0;
+}
+
+.card-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.cta-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin-top: 8px;
 }
 
 .product-grid{
@@ -23,6 +48,7 @@
 }
 
 .model{
+    grid-area: model;
     background-image: url(../../images/products/modelo-feminino.jpg);
 }
 
@@ -52,4 +78,25 @@
         "highlight highlight model sneaker-color"
         "sneaker-white sneaker-white model sneaker-silver";
     gap: 30px;
+}
+
+.top1-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.card-title {
+    color: #EDEDED;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.cta-group {
+    display: flex;
+    gap: 10px;
+    
 }
