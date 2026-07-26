@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SyntaxWear - Tenis e Sneakers Online</title>
-  <meta name="description" content="Compre tênis e sneakers online na SyntaxWear. Descubra os últimos lançamentos, modelos exclusivos e promoções imperdíveis. Encontre o par perfeito para o seu estilo.">
+  <meta name="description"
+    content="Compre tênis e sneakers online na SyntaxWear. Descubra os últimos lançamentos, modelos exclusivos e promoções imperdíveis. Encontre o par perfeito para o seu estilo.">
   <link rel="stylesheet" href="./e-commerce-syntaxwear/css/reset.css">
   <link rel="stylesheet" href="./e-commerce-syntaxwear/css/variables.css">
   <link rel="stylesheet" href="./e-commerce-syntaxwear/css/base.css">
@@ -24,36 +25,44 @@
       </a>
     </h1>
 
-    <nav class="nav-center" aria-label="Categorias Principais">
-      <ul>
-        <li><a href="#">Masculino</a></li>
-        <li><a href="#">Feminino</a></li>
-        <li><a href="#">Outlet</a></li>
-      </ul>
-    </nav>
+    <input type="checkbox" class="menu-toggle" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">
+      <img src="/e-commerce-syntaxwear/images/icons/hamburguer.svg" alt="menu mobile">
+    </label>
 
-    <nav class="nav-right" aria-label="Acesso rápido">
-      <ul>
-        <li><a href="#">Nossas lojas</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li>
-          <a href="#" aria-label="Minha conta">
-            <img class="nav-icon" src="./e-commerce-syntaxwear/images/icons/user.svg" alt="Minha conta">
-          </a>
-        </li>
-        <li>
-          <a href="#" aria-label="Ajuda">
-            <img class="nav-icon" src="./e-commerce-syntaxwear/images/icons/help.svg" alt="Ajuda">
-          </a>
-        </li>
-        <li>
-          <a href="#" aria-label="Carrinho">
-            <img class="nav-icon" src="./e-commerce-syntaxwear/images/icons/bag.svg" alt="Carrinho">
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <nav class="nav container">
 
+
+      <nav class="nav-center" aria-label="Categorias Principais">
+        <ul>
+          <li><a href="#">Masculino</a></li>
+          <li><a href="#">Feminino</a></li>
+          <li><a href="#">Outlet</a></li>
+        </ul>
+      </nav>
+
+      <nav class="nav-right" aria-label="Acesso rápido">
+        <ul>
+          <li><a href="#">Nossas lojas</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li>
+            <a href="#" aria-label="Minha conta">
+              <img class="nav-icon" src="./e-commerce-syntaxwear/images/icons/user.svg" alt="Minha conta">
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Ajuda">
+              <img class="nav-icon" src="./e-commerce-syntaxwear/images/icons/help.svg" alt="Ajuda">
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Carrinho">
+              <img class="nav-icon" src="./e-commerce-syntaxwear/images/icons/bag.svg" alt="Carrinho">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </nav>
   </header>
 
   <main>
@@ -99,21 +108,21 @@
       </div>
     </section>
     <section class="grid-section">
-        <div class="card highlight">
-          <div class="top1-content">
-              <h3 class="card-title">Krypton One</h3>
-              <p class="card-subtitle">Estilo Urbano com atitude</p>
-              <div class="cta-group">
-                 <a href="#" class="btn btn-outline">Feminino</a>
-                 <a href="#" class="btn btn-filled">Masculino</a>
-              </div>
+      <div class="card highlight">
+        <div class="top1-content">
+          <h3 class="card-title">Krypton One</h3>
+          <p class="card-subtitle">Estilo Urbano com atitude</p>
+          <div class="cta-group">
+            <a href="#" class="btn btn-outline">Feminino</a>
+            <a href="#" class="btn btn-filled">Masculino</a>
           </div>
         </div>
-        <div class="card sneaker-purple"></div>
-        <div class="card model"></div>
-        <div class="card sneaker-color"></div>
-        <div class="card sneaker-white"></div>
-        <div class="card sneaker-silver"></div>
+      </div>
+      <div class="card sneaker-purple"></div>
+      <div class="card model"></div>
+      <div class="card sneaker-color"></div>
+      <div class="card sneaker-white"></div>
+      <div class="card sneaker-silver"></div>
     </section>
   </main>
 

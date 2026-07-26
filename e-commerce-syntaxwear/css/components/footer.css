@@ -133,31 +133,3 @@
   filter: none;
 }
 
-@media (max-width: 1080px) {
-  .footer-content {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-links-group {
-    grid-template-columns: repeat(2, minmax(140px, 1fr));
-  }
-}
-
-@media (max-width: 720px) {
-  .site-footer {
-    padding: 32px 20px 24px;
-  }
-
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .footer-links-group {
-    grid-template-columns: 1fr;
-  }
-
-  .social-icons {
-    flex-wrap: wrap;
-  }
-}
