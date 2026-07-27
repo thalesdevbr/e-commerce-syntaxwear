@@ -133,3 +133,38 @@
   filter: none;
 }
 
+.footer-copy{
+  font-size: 1.25rem;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+@media (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "newsletter"
+      "links"
+      "social";
+    gap: 28px 0;
+    padding: 0 20px;
+  }
+
+  .footer-links-group {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-links-group {
+    flex-direction: column;
+    gap: 18px;
+  }
+}

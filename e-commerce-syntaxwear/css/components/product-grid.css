@@ -36,15 +36,58 @@
 }
 
 .product-grid{
-    display: grid
+    display: grid;
+}
+
+@media (max-width: 1280px) {
+  .grid-section {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 260px);
+    grid-template-areas:
+      "highlight highlight"
+      "model sneaker-color"
+      "sneaker-purple sneaker-purple"
+      "sneaker-white sneaker-silver";
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, minmax(220px, auto));
+    grid-template-areas:
+      "highlight"
+      "model"
+      "sneaker-color"
+      "sneaker-purple"
+      "sneaker-white"
+      "sneaker-silver";
+    gap: 20px;
+  }
+
+  .card {
+    min-height: 220px;
+  }
+
+  .top1-content {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    text-align: left;
+    padding: 24px;
+  }
+
+  .cta-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 
 .sneaker-purple{
     grid-area: sneaker-purple;
     background-image: url(../../images/products/roxo-verde-grid.jpg);
-
-   
 }
 
 .model{

@@ -13,8 +13,8 @@
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding: 0 8rem 0 0;
+    justify-content: center;
+    padding: 0 3rem;
 }
 
 .hero-content {
@@ -40,4 +40,61 @@
 .hero-content .hero-subtitle {
     font-size: 1.25rem;
     font-weight: 400;
+}
+
+@media (max-width: 1280px) {
+  .hero-section {
+    margin-top: 100px;
+    min-height: 420px;
+    height: auto;
+    padding: 1.5rem 0;
+  }
+
+  .hero-overlay {
+    padding: 0 1.5rem;
+  }
+
+  .hero-content {
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-content .hero-title {
+    font-size: 1.9rem;
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    margin-top: 120px;
+    min-height: 360px;
+    height: auto;
+    padding: 2rem 0 2.5rem;
+  }
+
+  .hero-overlay {
+    justify-content: center;
+    padding: 0 1rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding-bottom: 0;
+    margin: 0 auto;
+  }
+
+  .hero-content .hero-title {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+    line-height: 1.2;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+  }
 }
